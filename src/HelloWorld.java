@@ -3,13 +3,8 @@ public class HelloWorld {
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            String greeting = "Hello, ";
-            for (String name : args) {
-                greeting += name + ", ";
-            }
-            greeting = greeting.substring(0, greeting.length() - 2);
-            greeting += "!";
-            System.out.println(greeting);
+            String joinedNames = String.join(", ", args);
+            System.out.println("Hello, " + joinedNames + "!");
         }
     }
 }
